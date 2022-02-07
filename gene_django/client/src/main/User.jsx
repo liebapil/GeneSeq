@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 
-export default function User() {
+export default function User(props) {
 
     const [userNameReg, setUserNameReg] = useState('')
     const [passwordReg, setPasswordReg] = useState('')
@@ -20,6 +20,15 @@ export default function User() {
         })
         console.log(res)
     }
+
+    const login = async (e) => {
+        e.preventDefault() 
+        const res = await axios.get(`http://localhost:8000/user/`,{
+            user_name: userName,
+            password: password
+        })
+    }
+    
 
 
    
@@ -49,7 +58,7 @@ export default function User() {
           />
         <button >Register</button>
       </form>
-      <form className='login'>
+      <form className='login' onSubmit={login}>
           <label htmlFor='username'>User Name</label>
           <input
            name='username'
