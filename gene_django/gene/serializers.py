@@ -16,23 +16,33 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        field = ('id', 'user_name', 'password', 'gene')
+        fields = ('id', 'user_name', 'password', 'gene', 'user_url',)
 
 # serializer between gene and mutation 
 class GeneSerializer(serializers.HyperlinkedModelSerializer):
-    mutation = serializers.HyperlinkedRelatedField(
+    mutations = serializers.HyperlinkedRelatedField(
         view_name='mutation_detail',
         many=True,
         read_only=True
     )
 
-    user_url = serializers.ModelSerializer.serializer_url_field(
+    gene_url = serializers.ModelSerializer.serializer_url_field(
         view_name='gene_detail'
     )
 
+    users = serializers.HyperlinkedRelatedField(
+        view_name='user_detail',
+        read_only=True
+    )
+    user_id = serializers.PrimaryKeyRelatedField(
+        queryset=User.objects.all(),
+        source='users'
+    )
+    
+
     class Meta:
         model = Gene
-        field = ('id', 'user', 'gene_name', 'sequence', 'mutation')
+        fields = ('id', 'user', 'gene_name', 'sequence', 'mutations','users','gene_url', 'user_id',)
 
 
 #serializer between mutation and gene 
@@ -42,10 +52,11 @@ class MutationSerializer(serializers.HyperlinkedModelSerializer):
         read_only=True
     )
 
-    user_url = serializers.ModelSerializer.serializer_url_field(
-        view_name='mutation_detail'
+    gene_id = serializers.PrimaryKeyRelatedField(
+        queryset=Gene.objects.all(),
+        source='gene'
     )
 
     class Meta:
         model = Mutation
-        field = ('id', 'gene', 'mutation', 'hphob_hphil', 'protonate', 'gene')
+        fields = ('id', 'gene', 'mutation', 'hphob_hphil', 'protonate', 'gene','gene_id',)

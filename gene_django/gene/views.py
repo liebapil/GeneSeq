@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .serializers import UserSerializer
-from .models import User
+from .serializers import UserSerializer, GeneSerializer
+from .models import User, Gene
 
 # Create your views here.
 class UserList(generics.ListCreateAPIView):
