@@ -10,3 +10,11 @@ class UserList(generics.ListCreateAPIView):
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+class GeneList(generics.ListCreateAPIView):
+    queryset = Gene.objects.all()
+    serializer_class = GeneSerializer
+
+class GeneDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Gene.objects.all()
+    serializer_class = GeneSerializer
