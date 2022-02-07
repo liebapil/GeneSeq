@@ -36,7 +36,6 @@ class GeneSerializer(serializers.HyperlinkedModelSerializer):
     )
     
     
-
     class Meta:
         model = Gene
         fields = ('id', 'user', 'gene_name', 'sequence', 'mutations','users','gene_url', )
