@@ -23,7 +23,7 @@ to come
 ### ***Screenshots:***
 
 
-![ERD](https://imgur.com/qdI24jD.png)
+![ERD](https://imgur.com/ihl8o93.png)
 ![CHD](https://imgur.com/efTBZqT.png)
 
 
