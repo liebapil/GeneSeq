@@ -37,6 +37,3 @@ to come
 ### ***Credits***
 
 to come
----
-#####  END OF README.MD
----
