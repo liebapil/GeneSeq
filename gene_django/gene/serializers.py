@@ -34,15 +34,12 @@ class GeneSerializer(serializers.HyperlinkedModelSerializer):
         view_name='user_detail',
         read_only=True
     )
-    user_id = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.all(),
-        source='users'
-    )
+    
     
 
     class Meta:
         model = Gene
-        fields = ('id', 'user', 'gene_name', 'sequence', 'mutations','users','gene_url', 'user_id',)
+        fields = ('id', 'user', 'gene_name', 'sequence', 'mutations','users','gene_url', )
 
 
 #serializer between mutation and gene 
