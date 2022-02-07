@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE gene;
+CREATE USER geneuser WITH PASSWORD 'gene';
+GRANT ALL PRIVILEGES ON DATABASE gene TO geneuser;
