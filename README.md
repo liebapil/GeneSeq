@@ -22,8 +22,9 @@ to come
 
 ### ***Screenshots:***
 
-
+Entity Relationship Diagram
 ![ERD](https://imgur.com/ihl8o93.png)
+Component Hierarchy Diagram 
 ![CHD](https://imgur.com/efTBZqT.png)
 
 
