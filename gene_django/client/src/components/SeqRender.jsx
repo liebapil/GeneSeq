@@ -26,7 +26,7 @@ export default function SeqRender(props) {
     }
     const handleDelete = async (e) => {
         e.preventDefault()
-        await axios.delete(`http://localhost:8000/gene/${params.id}`)
+        await axios.delete(`http://localhost:8000/gene/${id}`)
         setDeleteSeq()
         
     }
