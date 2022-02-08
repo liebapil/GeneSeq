@@ -9,9 +9,9 @@ export default function SeqRender(props) {
     const [update, setUpdate] = useState(false)
     const [showForm, toggleShowForm] = useState(false)
     const [deleteSeq, setDeleteSeq] = useState('')
-    const [geneName, setGeneName] = useState('')
-    const [sequencesOne, setSequencesOne] = useState('')
-    const [sequencesTwo, setSequencesTwo] = useState('')
+    const [geneName, setGeneName] = useState('no name')
+    const [sequencesOne, setSequencesOne] = useState('no seq')
+    const [sequencesTwo, setSequencesTwo] = useState('no seq')
     const { id } = useParams()
 
     const handleupdate = async (e) =>{
@@ -26,7 +26,7 @@ export default function SeqRender(props) {
     }
     const handleDelete = async (e) => {
         e.preventDefault()
-        await axios.delete(`http://localhost:8000/gene/${id}`)
+        await axios.delete(`http://localhost:8000/gene/${props.id}`)
         setDeleteSeq()
         
     }

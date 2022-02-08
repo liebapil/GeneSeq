@@ -4,9 +4,9 @@ import axios from 'axios'
 import SeqRender from './SeqRender';
 
 export default function Sequence() {
-  const [geneName, setGeneName] = useState('')
-  const [sequencesOne, setSequencesOne] = useState('')
-  const [sequencesTwo, setSequencesTwo] = useState('')
+  const [geneName, setGeneName] = useState('no name')
+  const [sequencesOne, setSequencesOne] = useState('no seq')
+  const [sequencesTwo, setSequencesTwo] = useState('no seq')
   const [submit, setSubmit] = useState(false);
   const [getSeq, setGetSeq] = useState([])
 
@@ -74,6 +74,7 @@ export default function Sequence() {
           gene_name={props.gene_name}
           sequence_one={props.sequence_one}
           sequence_two={props.sequence_two}
+          id={props.id}
           />)
         })}
 
