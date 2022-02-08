@@ -11,7 +11,10 @@ export default function Mutation(props) {
   const { id } = useParams()
 
   //get mutation 
-
+   const [mutation, getMutation] = useState('no mutation')
+   const [polar, getPolar] = useState('no polar')
+   const [protonate, getProtonate] = useState('no protonate')
+   const [submit, setSubmit] = useState(false);
 
 
    const getGene = async ()=>{
@@ -25,6 +28,10 @@ export default function Mutation(props) {
    useEffect(() => {
     getGene()
 }, [])
+
+  const postMutation = async () =>{
+    const res = await axios.post(`http://localhost:8000/mutation/`)
+  }
    
 
   return (
