@@ -22,6 +22,7 @@ export default function Sequence() {
       sequence_two: sequencesTwo
     })
     renderSeq()
+    console.log(res)
   }
 
   const renderSeq = async() =>{
