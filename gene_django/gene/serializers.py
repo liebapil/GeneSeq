@@ -15,7 +15,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 # serializer between gene and mutation 
 class GeneSerializer(serializers.HyperlinkedModelSerializer):
-    mutations = serializers.HyperlinkedRelatedField(
+    mutation = serializers.HyperlinkedRelatedField(
         view_name='mutation_detail',
         many=True,
         read_only=True
@@ -28,7 +28,7 @@ class GeneSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Gene
-        fields = ('id', 'gene_name', 'sequence', 'mutations','gene_url', )
+        fields = ('id', 'gene_name', 'sequence', 'mutation','gene_url', )
 
 
 #serializer between mutation and gene 
@@ -45,4 +45,4 @@ class MutationSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Mutation
-        fields = ('id', 'gene', 'mutation', 'hphob_hphil', 'protonate', 'gene','gene_id',)
+        fields = ('id','mutation', 'hphob_hphil', 'protonate', 'gene','gene_id',)

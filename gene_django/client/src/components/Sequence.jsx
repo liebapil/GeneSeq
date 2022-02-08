@@ -13,7 +13,7 @@ export default function Sequence() {
       return
     }
     setSubmit(true)
-    const res = await axios.post(`http://localhost:8000/gene`, {
+    const res = await axios.post(`http://localhost:8000/gene/`, {
       gene_name: geneName,
       sequence: sequences
     })
