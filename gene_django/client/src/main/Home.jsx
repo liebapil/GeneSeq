@@ -6,7 +6,7 @@ import User from './User';
 
 
 export default function Home() {
-    const [isLoggedIn, setisLoggedIn] = useState(false)
+    // const [isLoggedIn, setisLoggedIn] = useState(false)
     
 
     
