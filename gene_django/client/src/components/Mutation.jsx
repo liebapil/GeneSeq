@@ -26,8 +26,8 @@ export default function Mutation(props) {
   return (
   <div>
     <p>Gene name: {gene.gene_name}</p>
-    <p></p>
-    <p></p>
+    <p>Sequence one: {gene.sequence_one} </p>
+    <p>Sequence Two: {gene.sequence_two}</p>
 
   </div>)
 }
