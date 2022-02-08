@@ -10,7 +10,6 @@ class User(models.Model):
         return self.user_name 
 
 class Gene(models.Model):
-    user = models.ForeignKey(User, on_delete = models.CASCADE, related_name='gene')
     gene_name = models.TextField(default='no gene')
     sequence = models.TextField(default='no sequence')
 

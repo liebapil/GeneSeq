@@ -4,11 +4,6 @@ from .models import User, Gene, Mutation
 
 # sterlizer between user and gene 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    gene = serializers.HyperlinkedRelatedField(
-        view_name='gene_detail',
-        many=True,
-        read_only=True
-    )
 
     user_url = serializers.ModelSerializer.serializer_url_field(
         view_name='user_detail'
@@ -16,7 +11,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'user_name', 'password', 'gene', 'user_url',)
+        fields = ('id', 'user_name', 'password', 'user_url',)
 
 # serializer between gene and mutation 
 class GeneSerializer(serializers.HyperlinkedModelSerializer):
@@ -29,16 +24,11 @@ class GeneSerializer(serializers.HyperlinkedModelSerializer):
     gene_url = serializers.ModelSerializer.serializer_url_field(
         view_name='gene_detail'
     )
+    
 
-    users = serializers.HyperlinkedRelatedField(
-        view_name='user_detail',
-        read_only=True
-    )
-    
-    
     class Meta:
         model = Gene
-        fields = ('id', 'user', 'gene_name', 'sequence', 'mutations','users','gene_url', )
+        fields = ('id', 'gene_name', 'sequence', 'mutations','gene_url', )
 
 
 #serializer between mutation and gene 

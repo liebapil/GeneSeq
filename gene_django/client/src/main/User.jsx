@@ -13,6 +13,7 @@ export default function User(props) {
     const [password, setPassword] = useState('')
 
     const [allUser, setAllUser] = useState([])
+    
 
     const register = async (e) => {
         e.preventDefault()
@@ -29,7 +30,7 @@ export default function User(props) {
         for (let i = 0; i < allUser.length; i++) {
             if (userName === allUser[i].user_name) {
                 if (password === allUser[i].password) {
-                    props.history.push('/geneseq')
+                    console.log('true')
                 } else {
                     console.log('you failed')
                 }
