@@ -1,6 +1,7 @@
 import {Route , Routes} from 'react-router-dom'
 import Home from './main/Home'
 import User from './main/User'
+import Mutation from './components/Mutation';
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
      <Routes>
        <Route path="/" element={<User/>}/>
-       <Route path="/geneseq" element={<Home/>}/>  
+       <Route path="/geneseq" element={<Home/>}/>
+       <Route path="/geneseq/mutation/:id" element={<Mutation/>}/>   
      </Routes>
     </div>
   );
