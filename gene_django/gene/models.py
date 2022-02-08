@@ -11,7 +11,8 @@ class User(models.Model):
 
 class Gene(models.Model):
     gene_name = models.TextField(default='no gene')
-    sequence = models.TextField(default='no sequence')
+    sequence_one = models.TextField(default='no sequence')
+    sequence_two = models.TextField(default='no sequence')
 
     def __str__(self):
         return self.gene_name

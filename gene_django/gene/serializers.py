@@ -28,7 +28,7 @@ class GeneSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Gene
-        fields = ('id', 'gene_name', 'sequence', 'mutation','gene_url', )
+        fields = ('id', 'gene_name', 'sequence_one', 'sequence_two','mutation','gene_url', )
 
 
 #serializer between mutation and gene 
