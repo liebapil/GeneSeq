@@ -26,7 +26,7 @@ export default function Mutation(props) {
   }
   useEffect(() => {
     getGene()
-    postMutation()
+    
   }, [])
 
   /////mutation
@@ -35,9 +35,10 @@ export default function Mutation(props) {
     const res = await axios.post(`http://localhost:8000/mutation/`, {
       mutation: mutation,
       hphob_hphil: polar,
-      protonate: protonates
+      protonate: protonates,
+      gene_id:id
     })
-    console.log(res)
+    console.log(e)
   }
 
 
