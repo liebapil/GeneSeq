@@ -26,7 +26,7 @@ export default function Mutation(props) {
   }
   useEffect(() => {
     getGene()
-    
+
   }, [])
 
   /////mutation
@@ -36,7 +36,7 @@ export default function Mutation(props) {
       mutation: mutation,
       hphob_hphil: polar,
       protonate: protonates,
-      gene_id:id
+      gene_id: id
     })
     console.log(e)
   }
