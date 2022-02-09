@@ -12,15 +12,17 @@ export default function SeqRender(props) {
     const [geneName, setGeneName] = useState('')
     const [sequencesOne, setSequencesOne] = useState('')
     const [sequencesTwo, setSequencesTwo] = useState('')
+    const [getSeq, setGetSeq] = useState({})
    
 
 
-    const getSeq = async() =>{
+    const renderSeq = async() =>{
         const res = await axios.get(`http://localhost:8000/gene/`)
+        setGetSeq(res.data)
       }
 
       useEffect(()=>{
-        getSeq()
+        renderSeq()
       },[])
     
 
@@ -32,14 +34,14 @@ export default function SeqRender(props) {
             sequence_one: sequencesOne,
             sequence_two: sequencesTwo
         })
-        getSeq()
+        renderSeq()
         toggleShowForm(!showForm)
     }
     const handleDelete = async (e) => {
         e.preventDefault()
         await axios.delete(`http://localhost:8000/gene/${props.id}`)
         setDeleteSeq()
-     
+        renderSeq()
     }
 
     const handleEdit = (e) => {
@@ -50,7 +52,7 @@ export default function SeqRender(props) {
     return (
         <div >
             <div>
-            <Link className='seq_link' to={`/geneseq/mutation/${props.id}`}>
+            <Link className='seq_link' to={`/mutation/${props.id}`}>
                 <p>Gene Name: {props.gene_name}</p>
                 <p>Sequence one: {props.sequence_one}</p>
                 <p>Sequence two: {props.sequence_two}</p>
