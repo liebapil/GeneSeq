@@ -20,7 +20,7 @@ export default function Mutation(props) {
 
 
   const getGene = async (e) => {
-    
+    ///gene
     const res = await axios.get(`http://localhost:8000/gene/${id}`)
     setGene(res.data)
     setGeneName(res.data.gene_name)
@@ -58,6 +58,7 @@ export default function Mutation(props) {
       <p>Sequence Two: {gene.sequence_two}</p>
       <div>
         <form onSubmit={postMutation}>
+          <label htmlFor='mutation'>Mutation? </label>
           <input
             name='mutation'
             type='text'
@@ -66,6 +67,7 @@ export default function Mutation(props) {
               setMutation(e.target.value)
             }}
           />
+          <label htmlFor='polar'>Hydrophobic and Hydrophilic? </label>
           <input
             name='polar'
             type='text'
@@ -74,6 +76,7 @@ export default function Mutation(props) {
               setPolar(e.target.value)
             }}
           />
+          <label htmlFor='protonate'>Protonate? </label>
           <input
             name='protonate'
             type='text'
