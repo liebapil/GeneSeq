@@ -19,8 +19,10 @@ export default function Mutation(props) {
   const [getmutation, setGetMutation]=useState([])
 
 
-  const getGene = async () => {
+  const getGene = async (e) => {
+    
     const res = await axios.get(`http://localhost:8000/gene/${id}`)
+    setGene(res.data)
     setGeneName(res.data.gene_name)
     setSequencesOne(res.data.sequence_one)
     setSequencesTwo(res.data.sequence_two)
