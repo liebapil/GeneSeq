@@ -22,10 +22,10 @@ export default function Sequence() {
       sequence_two: sequencesTwo
     })
     renderSeq()
-    console.log(res)
+
   }
 
-  const renderSeq = async() =>{
+  const renderSeq = async () => {
     const res = await axios.get(`http://localhost:8000/gene/`)
     setGetSeq(res.data)
   }
@@ -33,7 +33,7 @@ export default function Sequence() {
   useEffect(() => {
 
     renderSeq()
-}, [])
+  }, [])
 
   return (
     <div>
@@ -68,13 +68,14 @@ export default function Sequence() {
         <button>Submit</button>
       </form>
       <div className='get_seq'>
-        {getSeq.map((props, idx)=>{
+        {getSeq.map((props, idx) => {
           return (<SeqRender
-          key={idx}
-          gene_name={props.gene_name}
-          sequence_one={props.sequence_one}
-          sequence_two={props.sequence_two}
-          id={props.id}
+            key={idx}
+            gene_name={props.gene_name}
+            sequence_one={props.sequence_one}
+            sequence_two={props.sequence_two}
+            id={props.id}
+            renderSeq={renderSeq}
           />)
         })}
 
