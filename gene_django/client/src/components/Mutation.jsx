@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom"
+import MutationRender from './MutationRender';
 
 export default function Mutation(props) {
   //get seq
@@ -15,6 +16,7 @@ export default function Mutation(props) {
   const [polar, setPolar] = useState('no polar')
   const [protonates, setProtonates] = useState('no protonate')
   const [submit, setSubmit] = useState(false);
+  const [getmutation, setGetMutation]=useState([])
 
 
   const getGene = async () => {
@@ -26,7 +28,7 @@ export default function Mutation(props) {
   }
   useEffect(() => {
     getGene()
-
+    renderMut()
   }, [])
 
   /////mutation
@@ -41,6 +43,10 @@ export default function Mutation(props) {
     console.log(e)
   }
 
+  const renderMut = async() =>{
+    const res = await axios.get(`http://localhost:8000/mutation/`)
+    setGetMutation(res.data)
+  }
 
 
   return (
@@ -76,6 +82,18 @@ export default function Mutation(props) {
           />
           <input className="submit-mutation" type="submit" />
         </form>
+      </div>
+      <div>
+      {getmutation.map((props, idx)=>{
+        if (props.gene_id === parseInt(id)){
+          return (<MutationRender
+          key={idx}
+          mutation={props.mutation}
+          hphob_hphil={props.hphob_hphil}
+          protonate={props.protonate}
+          
+          />)}
+        })}
       </div>
     </div>)
 }
