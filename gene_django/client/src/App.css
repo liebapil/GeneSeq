@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
+@media only screen and (max-width: 800px) {
+  .App {
+background-color: black;
+  }
+}
 
 .App {
   text-align: center;
-  background-color: #74c8e1;
-}
-.seq_page{
-display: flex;
-flex-direction: column;
+  background-color: #74c8e1; 
 }
 
 html,
@@ -24,6 +24,12 @@ body,
   min-height: fit-content;
   margin: 20px;
 }
+
+.seq_page{
+  display: flex;
+  flex-direction: column;
+  
+  }
 .seq_link{
   text-decoration: none;
   color: #072e3a;
@@ -190,6 +196,7 @@ label{
   margin-right: auto;
   margin-top: 1em;
   margin-bottom: 2em;
+  border-radius: 00.5em;
 }
 
 
