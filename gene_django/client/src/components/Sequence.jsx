@@ -36,10 +36,11 @@ export default function Sequence() {
   }, [])
 
   return (
-    <div>
+    <div className='seq_page'>
       <form className='post_gene' onSubmit={postGene}>
         <label htmlFor='gene_name'>Gene Name</label>
         <input
+          className='seq_gene'
           name='gene_name'
           type='text'
           placeholder='gene name'
@@ -49,6 +50,7 @@ export default function Sequence() {
         />
         <label htmlFor='sequenceOne'>Sequence one</label>
         <input
+          className='seq_seq'
           name='sequenceOne'
           type='text'
           placeholder='sequence one'
@@ -58,6 +60,7 @@ export default function Sequence() {
         />
         <label htmlFor='sequenceTwo'>Sequence two</label>
         <input
+          className='seq_seq'
           name='sequenceTwo'
           type='text'
           placeholder='sequence Two'
@@ -65,7 +68,7 @@ export default function Sequence() {
             setSequencesTwo(e.target.value)
           }}
         />
-        <button>Submit</button>
+        <button className='submit_seq'>Submit</button>
       </form>
       <div className='get_seq'>
         {getSeq.map((props, idx) => {
