@@ -42,7 +42,7 @@ export default function Mutation(props) {
       protonate: protonates,
       gene_id: id
     })
-    console.log(e)
+    renderMut()
   }
 
   const renderMut = async() =>{
@@ -52,14 +52,15 @@ export default function Mutation(props) {
 
 
   return (
-    <div>
-      <p>Gene name: {gene.gene_name}</p>
-      <p>Sequence one: {gene.sequence_one} </p>
-      <p>Sequence Two: {gene.sequence_two}</p>
+    <div className='mutation_page'>
+      <p className='mutation_gene'>Gene name: {gene.gene_name}</p>
+      <p className='mutation_seq'>Sequence one: {gene.sequence_one} </p>
+      <p className='mutation_seq'>Sequence Two: {gene.sequence_two}</p>
       <div>
-        <form onSubmit={postMutation}>
+        <form className='mutation_form' onSubmit={postMutation}>
           <label htmlFor='mutation'>Mutation? </label>
           <input
+            className='form_mutation'
             name='mutation'
             type='text'
             placeholder='mutation'
@@ -69,6 +70,7 @@ export default function Mutation(props) {
           />
           <label htmlFor='polar'>Hydrophobic and Hydrophilic? </label>
           <input
+          className='form_polar'
             name='polar'
             type='text'
             placeholder='polar'
@@ -78,6 +80,7 @@ export default function Mutation(props) {
           />
           <label htmlFor='protonate'>Protonate? </label>
           <input
+          className='form_protonate'
             name='protonate'
             type='text'
             placeholder='protonate'
@@ -88,7 +91,7 @@ export default function Mutation(props) {
           <input className="submit-mutation" type="submit" />
         </form>
       </div>
-      <div>
+      <div className='mutation_render'>
       {getmutation.map((props, idx)=>{
         if (props.gene_id === parseInt(id)){
           return (<MutationRender
