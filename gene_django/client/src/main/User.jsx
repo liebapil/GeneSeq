@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,8 @@ export default function User(props) {
     const [password, setPassword] = useState('')
 
     const [allUser, setAllUser] = useState([])
+
+    let navigate= useNavigate()
     
 
     const register = async (e) => {
@@ -30,7 +33,7 @@ export default function User(props) {
         for (let i = 0; i < allUser.length; i++) {
             if (userName === allUser[i].user_name) {
                 if (password === allUser[i].password) {
-                    console.log('true')
+                    navigate('/gene/')
                 } else {
                     console.log('you failed')
                 }
