@@ -16,7 +16,7 @@ export default function Mutation(props) {
   const [polar, setPolar] = useState('no polar')
   const [protonates, setProtonates] = useState('no protonate')
   const [submit, setSubmit] = useState(false);
-  const [getmutation, setGetMutation]=useState([])
+  const [getmutation, setGetMutation] = useState([])
 
 
   const getGene = async (e) => {
@@ -45,7 +45,7 @@ export default function Mutation(props) {
     renderMut()
   }
 
-  const renderMut = async() =>{
+  const renderMut = async () => {
     const res = await axios.get(`http://localhost:8000/mutation/`)
     setGetMutation(res.data)
   }
@@ -70,7 +70,7 @@ export default function Mutation(props) {
           />
           <label htmlFor='polar'>Hydrophobic and Hydrophilic? </label>
           <input
-          className='form_polar'
+            className='form_polar'
             name='polar'
             type='text'
             placeholder='polar'
@@ -80,7 +80,7 @@ export default function Mutation(props) {
           />
           <label htmlFor='protonate'>Protonate? </label>
           <input
-          className='form_protonate'
+            className='form_protonate'
             name='protonate'
             type='text'
             placeholder='protonate'
@@ -92,15 +92,16 @@ export default function Mutation(props) {
         </form>
       </div>
       <div className='mutation_render'>
-      {getmutation.map((props, idx)=>{
-        if (props.gene_id === parseInt(id)){
-          return (<MutationRender
-          key={idx}
-          mutation={props.mutation}
-          hphob_hphil={props.hphob_hphil}
-          protonate={props.protonate}
-          
-          />)}
+        {getmutation.map((props, idx) => {
+          if (props.gene_id === parseInt(id)) {
+            return (<MutationRender
+              key={idx}
+              mutation={props.mutation}
+              hphob_hphil={props.hphob_hphil}
+              protonate={props.protonate}
+
+            />)
+          }
         })}
       </div>
     </div>)
