@@ -199,4 +199,37 @@ label{
   border-radius: 00.5em;
 }
 
+.registers,
+.login{
+  display: flex;
+  flex-direction: column;
+}
 
+.username,
+.password{
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  height: 3em;
+  text-align: center;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #D4F1F4;
+  margin-bottom: 2em;
+}
+
+.login_button{
+  width: 10em;
+  height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 2em;
+  border-color: #58a8c0;
+  background-color: #9cd8df;
+}
+
+.login_button:hover{
+  background-color: #42a1ac;
+}

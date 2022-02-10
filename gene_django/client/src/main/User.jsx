@@ -15,8 +15,8 @@ export default function User(props) {
 
     const [allUser, setAllUser] = useState([])
 
-    let navigate= useNavigate()
-    
+    let navigate = useNavigate()
+
 
     const register = async (e) => {
         e.preventDefault()
@@ -41,7 +41,7 @@ export default function User(props) {
                 console.log('no match')
             }
         }
-        
+
     }
 
     const getAllUsers = async () => {
@@ -68,6 +68,7 @@ export default function User(props) {
             <form className='registers' onSubmit={register}>
                 <label htmlFor='username'>User Name</label>
                 <input
+                    className='username'
                     name='username'
                     type='text'
                     placeholder='user name'
@@ -77,6 +78,7 @@ export default function User(props) {
                 />
                 <label htmlFor='password'>password</label>
                 <input
+                    className='password'
                     name='password'
                     type='text'
                     placeholder='password'
@@ -84,11 +86,12 @@ export default function User(props) {
                         setPasswordReg(e.target.value)
                     }}
                 />
-                <button >Register</button>
+                <button className='login_button' >Register</button>
             </form>
             <form className='login' onSubmit={login} >
                 <label htmlFor='username'>User Name</label>
                 <input
+                    className='username'
                     name='username'
                     type='text'
                     placeholder='user name'
@@ -98,6 +101,7 @@ export default function User(props) {
                 />
                 <label htmlFor='password'>password</label>
                 <input
+                    className='username'
                     name='password'
                     type='text'
                     placeholder='password'
@@ -105,7 +109,7 @@ export default function User(props) {
                         setPassword(e.target.value)
                     }}
                 />
-                <button>Login</button>
+                <button className='login_button'>Login</button>
             </form>
 
         </div>
