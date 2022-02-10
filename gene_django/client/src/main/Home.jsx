@@ -13,8 +13,7 @@ export default function Home() {
 
     
   return(
-   <div>
-       <p>hello page two</p>
+   <div className='home_page'>
     <Sequence/>   
   </div>
   )}
