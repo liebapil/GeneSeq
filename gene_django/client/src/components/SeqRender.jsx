@@ -46,17 +46,18 @@ export default function SeqRender(props) {
   }
 
   return (
-    <div >
+    <div className='seq_render'>
       <div>
         <Link className='seq_link' to={`/mutation/${props.id}`}>
-          <p>Gene Name: {props.gene_name}</p>
-          <p>Sequence one: {props.sequence_one}</p>
-          <p>Sequence two: {props.sequence_two}</p>
+          <p className='gene_render'>Gene Name: {props.gene_name}</p>
+          <p className='seq_render'>Sequence one: {props.sequence_one}</p>
+          <p className='seq_render'>Sequence two: {props.sequence_two}</p>
         </Link>
         {showForm ?
           <form className='edit_gene' onSubmit={handleupdate}>
             <label htmlFor='gene_name'>Gene Name</label>
             <input
+              className='gene_input'
               name='gene_name'
               type='text'
               placeholder='gene name'
@@ -66,6 +67,7 @@ export default function SeqRender(props) {
             />
             <label htmlFor='sequenceOne'>Sequence one</label>
             <input
+              className='seq_input'
               name='sequenceOne'
               type='text'
               placeholder='sequence one'
@@ -75,6 +77,7 @@ export default function SeqRender(props) {
             />
             <label htmlFor='sequenceTwo'>Sequence two</label>
             <input
+              className='seq_input'
               name='sequenceTwo'
               type='text'
               placeholder='sequence Two'
@@ -86,8 +89,8 @@ export default function SeqRender(props) {
           </form>
           :
           <div>
-            <button onClick={handleDelete}>Delete</button>
-            <button onClick={handleEdit}>Edit</button>
+            <button className='delete_button' onClick={handleDelete}>Delete</button>
+            <button className='edit button' onClick={handleEdit}>Edit</button>
           </div>
         }
       </div>
