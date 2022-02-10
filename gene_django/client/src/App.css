@@ -27,8 +27,6 @@ body,
 .seq_link{
   text-decoration: none;
   color: #072e3a;
-  padding: 10em;
-  text-align:center;
 
 }
 .post_gene {
@@ -97,6 +95,50 @@ label{
   margin: 1em;
 }
 
+.delete_button,
+.edit_button{
+  height: 2em;
+  width: 5em;
+  margin: 0.2em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #74c8e1;
+}
+.delete_button:hover{
+  background-color: #a3e4ec;
+}
+.edit_button:hover{
+  background-color: #a3e4ec;
+}
+
+.form{
+  /* margin:1em;
+  padding: 0.2em; */
+  display: flex;
+  flex-direction: column;
+}
+.seq_input{
+  margin-right: 0.6em;
+  margin-left: 0.2em;
+  background-color: #D4F1F4;
+  border-radius: 0.5em;
+}
+.submit-edit{
+  width: 10em;
+  height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 2em;
+  border-color: #58a8c0;
+  background-color: #9cd8df;
+}
+
+.submit-edit:hover{
+  background-color: #42a1ac;
+}
+
 /* mutation page */
 
 .mutation_seq{
@@ -118,6 +160,9 @@ label{
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
+  border-radius: 2em;
+  border-color: #9cd8df;
+  background-color: #b1e6ec;
 }
 
 .submit-mutation{
@@ -146,3 +191,5 @@ label{
   margin-top: 1em;
   margin-bottom: 2em;
 }
+
+

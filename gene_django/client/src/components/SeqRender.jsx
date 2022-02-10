@@ -58,8 +58,9 @@ export default function SeqRender(props) {
         <div className='form'>
         {showForm ?
           <form className='edit_gene' onSubmit={handleupdate}>
-            <label className='gene_label' htmlFor='gene_name'>Gene Name</label>
+            <label className='gene_label' htmlFor='gene_name'>Gene Name: </label>
             <input
+              className='seq_input'
               name='gene_name'
               type='text'
               placeholder='gene name'
@@ -68,7 +69,7 @@ export default function SeqRender(props) {
               }}
               value={props.gene_name}
             />
-            <label htmlFor='sequenceOne'>Sequence one</label>
+            <label htmlFor='sequenceOne'>Sequence one: </label>
             <input
               className='seq_input'
               name='sequenceOne'
@@ -79,7 +80,7 @@ export default function SeqRender(props) {
               }}
               value={props.sequence_one}
             />
-            <label htmlFor='sequenceTwo'>Sequence two</label>
+            <label htmlFor='sequenceTwo'>Sequence two: </label>
             <input
               className='seq_input'
               name='sequenceTwo'
@@ -95,7 +96,7 @@ export default function SeqRender(props) {
           :
           <div>
             <button className='delete_button' onClick={handleDelete}>Delete</button>
-            <button className='edit button' onClick={handleEdit}>Edit</button>
+            <button className='edit_button' onClick={handleEdit}>Edit</button>
           </div>
         }
         </div>
