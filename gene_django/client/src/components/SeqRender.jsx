@@ -50,9 +50,9 @@ export default function SeqRender(props) {
       <div>
         <div>
         <Link className='seq_link' to={`/mutation/${props.id}`}>
-          <p className='gene_render'>Gene Name: {props.gene_name}</p>
-          <p className='seq_render'>Sequence one: {props.sequence_one}</p>
-          <p className='seq_render'>Sequence two: {props.sequence_two}</p>
+          <p className='seq_text'>Gene Name: {props.gene_name}</p>
+          <p className='seq_text'>Sequence one: {props.sequence_one}</p>
+          <p className='seq_text'>Sequence two: {props.sequence_two}</p>
         </Link>
         </div>
         <div className='form'>

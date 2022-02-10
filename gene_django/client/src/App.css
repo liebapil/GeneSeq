@@ -26,6 +26,7 @@ body,
 }
 .seq_link{
   text-decoration: none;
+  color: #072e3a;
 }
 .post_gene {
   display: flex;
@@ -39,13 +40,16 @@ body,
     text-align: center;
     border-radius: 0.5em;
     border: none;
+    background-color: #D4F1F4;
+    
 }
 .seq_seq{
   height: 100px;
   margin: 20px;
-  text-align: center;
   border-radius: 0.5em;
   border: none;
+  background-color: #D4F1F4;
+  text-align: center;
 }
 
 label{
@@ -68,3 +72,26 @@ label{
     border: none;
     background-color: #74c8e1;
 }
+.submit_seq:hover{
+  background-color: #9cd8df;
+}
+
+.seq_render{
+  border-style: groove;
+  border-radius: 0.5em;
+  margin: 15px;
+  padding: 15px; 
+}
+
+.seq_text{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.mutation_seq{
+
+  letter-spacing: 0.5em;
+}
+
+
+
