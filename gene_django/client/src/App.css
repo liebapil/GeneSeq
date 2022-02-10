@@ -1,3 +1,22 @@
+
+
 .App {
   text-align: center;
+  background-color: #74c8e1;
+}
+.seq_page{
+display: flex;
+flex-direction: column;
+}
+html,
+body,
+#root,
+.App{
+  background-color: #74c8e1;
+  background: url('/Users/liebapil/ga_seir/unit4/project/project_p/GeneSeq/gene_django/client/src/image/dna4.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: fit-content;
 }

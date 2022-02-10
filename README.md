@@ -29,6 +29,7 @@ Component Hierarchy Diagram
 
 
 [Trello](https://trello.com/b/t7pWJIog/geneseq)
+[background image](https://st2.depositphotos.com/1762606/8529/i/600/depositphotos_85291298-stock-photo-dna-molecule-structure-background.jpg)
 
 
 ### ***Future Updates:***
