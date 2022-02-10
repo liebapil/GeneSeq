@@ -47,6 +47,7 @@ export default function Sequence() {
           onChange={(e) => {
             setGeneName(e.target.value)
           }}
+          
         />
         <label htmlFor='sequenceOne'>Sequence one</label>
         <input
@@ -57,6 +58,7 @@ export default function Sequence() {
           onChange={(e) => {
             setSequencesOne(e.target.value)
           }}
+         
         />
         <label htmlFor='sequenceTwo'>Sequence two</label>
         <input
@@ -67,8 +69,9 @@ export default function Sequence() {
           onChange={(e) => {
             setSequencesTwo(e.target.value)
           }}
+          
         />
-        <button className='submit_seq'>Submit</button>
+        <button className='submit_seq' type='submit'>Submit</button>
       </form>
       <div className='get_seq'>
         {getSeq.map((props, idx) => {

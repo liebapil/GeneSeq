@@ -77,6 +77,7 @@ export default function Mutation(props) {
             onChange={(e) => {
               setPolar(e.target.value)
             }}
+            
           />
           <label htmlFor='protonate'>Protonate? </label>
           <input

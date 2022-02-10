@@ -66,6 +66,7 @@ export default function SeqRender(props) {
               onChange={(e) => {
                 setGeneName(e.target.value)
               }}
+              value={props.gene_name}
             />
             <label htmlFor='sequenceOne'>Sequence one</label>
             <input
@@ -76,6 +77,7 @@ export default function SeqRender(props) {
               onChange={(e) => {
                 setSequencesOne(e.target.value)
               }}
+              value={props.sequence_one}
             />
             <label htmlFor='sequenceTwo'>Sequence two</label>
             <input
@@ -86,6 +88,7 @@ export default function SeqRender(props) {
               onChange={(e) => {
                 setSequencesTwo(e.target.value)
               }}
+              value={props.sequence_two}
             />
             <input className="submit-edit" type="submit" />
           </form>
