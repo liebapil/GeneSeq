@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 
 .App {
@@ -20,4 +22,49 @@ body,
   -o-background-size: cover;
   background-size: cover;
   min-height: fit-content;
+  margin: 20px;
+}
+.seq_link{
+  text-decoration: none;
+}
+.post_gene {
+  display: flex;
+  flex-direction: column;
+}
+.seq_gene{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height: 3em;
+    text-align: center;
+    border-radius: 0.5em;
+    border: none;
+}
+.seq_seq{
+  height: 100px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 0.5em;
+  border: none;
+}
+
+label{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2em;
+}
+
+.submit-edit{
+  width: 100px;
+}
+
+.submit_seq{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    height: 3em;
+    text-align: center;
+    border-radius: 10em;
+    font-family: 'Patrick Hand', cursive;
+    border: none;
+    background-color: #74c8e1;
 }
