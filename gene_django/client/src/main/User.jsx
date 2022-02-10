@@ -66,7 +66,7 @@ export default function User(props) {
     return (
         <div className='register_form'>
             <form className='registers' onSubmit={register}>
-                <label htmlFor='username'>User Name</label>
+                <label htmlFor='username'>User Name: </label>
                 <input
                     className='username'
                     name='username'
@@ -76,7 +76,7 @@ export default function User(props) {
                         setUserNameReg(e.target.value)
                     }}
                 />
-                <label htmlFor='password'>password</label>
+                <label htmlFor='password'>password: </label>
                 <input
                     className='password'
                     name='password'
@@ -86,10 +86,10 @@ export default function User(props) {
                         setPasswordReg(e.target.value)
                     }}
                 />
-                <button className='login_button' >Register</button>
+                <button className='login_button' >Register </button>
             </form>
             <form className='login' onSubmit={login} >
-                <label htmlFor='username'>User Name</label>
+                <label htmlFor='username'>User Name: </label>
                 <input
                     className='username'
                     name='username'
@@ -99,7 +99,7 @@ export default function User(props) {
                         setUserName(e.target.value)
                     }}
                 />
-                <label htmlFor='password'>password</label>
+                <label htmlFor='password'>password: </label>
                 <input
                     className='username'
                     name='password'
