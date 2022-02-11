@@ -1,1 +1,1 @@
-web: gunicorn gene_django_django.wsgi
+web: gunicorn gene_django.wsgi
