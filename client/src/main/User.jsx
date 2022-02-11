@@ -20,7 +20,7 @@ export default function User(props) {
 
     const register = async (e) => {
         e.preventDefault()
-        const res = await axios.post(`http://localhost:8000/user/`, {
+        const res = await axios.post(`https://geneseq.herokuapp.com/user/`, {
             user_name: userNameReg,
             password: passwordReg
         })
@@ -45,7 +45,7 @@ export default function User(props) {
     }
 
     const getAllUsers = async () => {
-        await axios.get(`http://localhost:8000/user/`)
+        await axios.get(`https://geneseq.herokuapp.com/user/`)
             .then(res => {
                 setAllUser(res.data)
 

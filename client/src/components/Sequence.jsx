@@ -16,7 +16,7 @@ export default function Sequence() {
       return
     }
     setSubmit(true)
-    const res = await axios.post(`http://localhost:8000/gene/`, {
+    const res = await axios.post(`https://geneseq.herokuapp.com/gene/`, {
       gene_name: geneName,
       sequence_one: sequencesOne,
       sequence_two: sequencesTwo
@@ -26,7 +26,7 @@ export default function Sequence() {
   }
 
   const renderSeq = async () => {
-    const res = await axios.get(`http://localhost:8000/gene/`)
+    const res = await axios.get(`https://geneseq.herokuapp.com/gene/`)
     setGetSeq(res.data)
   }
   

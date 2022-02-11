@@ -21,7 +21,7 @@ export default function Mutation(props) {
 
   const getGene = async (e) => {
     ///gene
-    const res = await axios.get(`http://localhost:8000/gene/${id}`)
+    const res = await axios.get(`https://geneseq.herokuapp.com/gene/${id}`)
     setGene(res.data)
     setGeneName(res.data.gene_name)
     setSequencesOne(res.data.sequence_one)
@@ -36,7 +36,7 @@ export default function Mutation(props) {
   /////mutation
   const postMutation = async (e) => {
     e.preventDefault()
-    const res = await axios.post(`http://localhost:8000/mutation/`, {
+    const res = await axios.post(`https://geneseq.herokuapp.com/mutation/`, {
       mutation: mutation,
       hphob_hphil: polar,
       protonate: protonates,
@@ -46,7 +46,7 @@ export default function Mutation(props) {
   }
 
   const renderMut = async () => {
-    const res = await axios.get(`http://localhost:8000/mutation/`)
+    const res = await axios.get(`https://geneseq.herokuapp.com/mutation/`)
     setGetMutation(res.data)
   }
 
