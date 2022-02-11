@@ -29,6 +29,7 @@ export default function Sequence() {
     const res = await axios.get(`http://localhost:8000/gene/`)
     setGetSeq(res.data)
   }
+  
 
   useEffect(() => {
 
