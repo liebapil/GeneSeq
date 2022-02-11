@@ -9,8 +9,8 @@
 [Front_end code](https://github.com/liebapil/geneseq-frontend)
 
 ### ***Deployment link***
+* [Gene-seq](https://geneseq-frontend.herokuapp.com/)
 * [Backend](https://geneseq.herokuapp.com/)
-* [App](https://geneseq-frontend.herokuapp.com/)
 
 ### ***Description:***
 * A program that will allow you compare Amino Acid sequences, shows you the mutation and let's you know if it could effect the shape of the protein 
