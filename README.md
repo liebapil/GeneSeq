@@ -5,6 +5,12 @@
   * [GitHub](https://github.com/liebapil).
   * [Linkedin](https://www.linkedin.com/in/lieba-pil/).
 
+### ***Front_end link***
+[Front_end code](https://github.com/liebapil/geneseq-frontend)
+
+### ***Deployment link***
+[Backend](https://geneseq.herokuapp.com/)
+[App](https://geneseq-frontend.herokuapp.com/)
 
 ### ***Description:***
 * A program that will allow you compare Amino Acid sequences, shows you the mutation and let's you know if it could effect the shape of the protein 
@@ -31,6 +37,8 @@ Component Hierarchy Diagram
 [Trello](https://trello.com/b/t7pWJIog/geneseq)
 [background image](https://st2.depositphotos.com/1762606/8529/i/600/depositphotos_85291298-stock-photo-dna-molecule-structure-background.jpg)
 [background image css](https://css-tricks.com/perfect-full-page-background-image/)
+
+
 
 
 ### ***Future Updates:***
