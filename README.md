@@ -34,16 +34,14 @@ Component Hierarchy Diagram
 ![CHD](https://imgur.com/efTBZqT.png)
 
 
-* [Trello](https://trello.com/b/t7pWJIog/geneseq)
-* [background image](https://st2.depositphotos.com/1762606/8529/i/600/depositphotos_85291298-stock-photo-dna-molecule-structure-background.jpg)
-* [background image css](https://css-tricks.com/perfect-full-page-background-image/)
-
-
-
-
 ### ***Future Updates:***
 to come
 
 ### ***Credits***
 
-to come
+* [Trello](https://trello.com/b/t7pWJIog/geneseq)
+* [background image](https://st2.depositphotos.com/1762606/8529/i/600/depositphotos_85291298-stock-photo-dna-molecule-structure-background.jpg)
+* [background image css](https://css-tricks.com/perfect-full-page-background-image/)
+* [Amino Acid chart](https://cdn.technologynetworks.com/tn/images/body/aminoacids-pic3revised1574260662291.png)
+* [canva](https://www.canva.com/)
+
