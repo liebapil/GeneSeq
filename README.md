@@ -27,10 +27,10 @@
 to come
 
 ### ***Screenshots:***
-# <img src="./images/user.png" width="200" height="150">
-# <img src="./images/gene_input.png" width="300" height="150">
-# <img src="./images/gene_render.png" width="200" height="150">
-# <img src="./images/mutation_input.png" width="200" height="150">
+# <img src="./images/user.png" width="400" height="350">
+# <img src="./images/gene_input.png" width="400" height="250">
+# <img src="./images/gene_render.png" width="400" height="350">
+# <img src="./images/mutation_input.png" width="400" height="250">
 
 ### ***Planning: ***
 Entity Relationship Diagram
