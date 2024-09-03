@@ -1,4 +1,5 @@
 from django.db import models
+import difflib
 
 # Create your models here.
 
@@ -16,6 +17,13 @@ class Gene(models.Model):
 
     def __str__(self):
         return self.gene_name
+    
+    def compare_sequences(self):
+        if self.sequence_one == self.sequence_two:
+            return "Sequences are identical"
+        else:
+            diff = difflib.ndiff(self.sequence_one, self.sequence_two)
+            return '\n'.join(diff)
 
 class Mutation(models.Model):
     gene = models.ForeignKey(Gene, on_delete = models.CASCADE, related_name='mutation' )
